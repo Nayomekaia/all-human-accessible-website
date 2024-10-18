@@ -1,0 +1,113 @@
+
+body {
+    font-family: 'Calvino Grande Trial', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000f5;
+ }
+ 
+ 
+ .container {
+    position: relative;
+    height: 100vh; 
+    width: 100vw;  /
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+   
+ }
+   
+ .overlay {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 100%;
+    background-image: url('https://s3-alpha-sig.figma.com/img/e9c0/ce48/06728062e3721e12b38b495b488c174d?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=leM3yizbEgKUWc8h1q4jUwBUQZtkYJ8apYjB4TcUH6Z2FFNDJ7axILOiatZO-VkG4nzC4lTTNrmfd45hnxcr8y8NYGmZZBz2vPCJlGJYYI9c~SJkd4eipjZrU~JQKkkDq7MRq9qMCHwUu3bnVS8sGxbx~THBPGCI~dQe97B9fnBrIIXSEUEmZhJKs661t550LSxGRDyBBUfkBurepPUn4tHsQGp~qBA95ltY7sJvZz3t9d0Gy-HbbG9Y2KKcdk8g2RhOXn7ZMSLK0uhc5NnT7XmmAtu6w0idyarOWbNrb66pfEeOunoOO7wuItzMRGFZRU0zuBtIagQID7rL~e9yCA__');
+    opacity: 65%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ 
+ 
+ .content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    color: white;
+    padding: 2vw; 
+ }
+  
+ 
+ 
+ h1 {
+    font-family: 'Calvino Grande Trial', sans-serif;
+    font-weight: 800;
+    font-size: 6rem;
+    margin-bottom: 2vw;
+    margin-left: 0;
+    line-height: 0.95;
+ }
+ 
+ 
+ p {
+     font-size: 1.5rem;
+     margin-top: 1vw;
+     margin-bottom: 10px;
+ 
+ 
+ }
+ 
+ 
+ .fade-in-text {
+    font-family: Arial;
+    font-size: 150px;
+    animation: fadeIn 5s;
+  }
+ 
+ 
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+ 
+ 
+ span {
+    display: block;
+ }
+ 
+ 
+ button {
+    background-color: rgba(255, 255, 255, 0.0); 
+    color: white; 
+    border: 1px solid white; 
+    padding: 1vw 6vw;
+    font-size: 1rem; 
+    cursor: pointer; 
+    border-radius: 40px; 
+    transition: background-color 0.3s ease;
+    display: inline-block; 
+    margin-top: 2vw; 
+ }
+ 
+ 
+ button:hover {
+    background-color: rgba(255, 255, 255, 0.5); 
+ }
+ 
+ 
+ 
+ @media (max-width: 700px) {
+    h1 {
+        font-size: 3rem; 
+        text-align: center;        
+    }
+    }
+ 
