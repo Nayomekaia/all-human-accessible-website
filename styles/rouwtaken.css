@@ -1,69 +1,100 @@
 body {
     background-color: #0d0d0d;
     color: #fff;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Calvino Grande Trial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden; 
+}
+
+.header {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: #0d0d0d; 
+    z-index: 1000; 
+    padding: 3em 0; 
+    text-align: center; 
+    border-bottom: 1px solid #fff; 
+}
+
+.header h1 {
+    font-size: 3em;
+    text-align: left;
+    margin: 0; 
+    font-weight: bold;
+}
+
+header h1 span {
+    display: block;
 }
 
 .container {
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 200px; 
 }
 
-.header h1 {
-    font-size: 2em;
-    margin-bottom: 1em;
-    font-weight: bold;
+h2 {
+    font-size: 1em; 
+    font-weight: 700; 
+    margin: 20px 0; 
 }
 
-.tasks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+p {
+    font-size: 1.2rem; 
+    font-weight: 700;
 }
 
-.task {
-    margin-bottom: 2em;
-}
-
-.task-info {
-    margin-top: 1em;
-    text-align: center;
+p span {
+    display: block; 
+    margin-top: 10px; 
+    font-weight: 200;
 }
 
 .task-icons {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: center; 
+    gap: 125px; 
+    width: 100%; 
+}
+
+.task-item {
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s ease;
 }
 
 .task-icon {
-    width: 80px;
-    transition: transform 0.3s ease;
+    width: 150px;
+    opacity: 0.5; 
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.task-icon:hover {
-    transform: scale(1.2);
+.task-item:hover .task-icon {
+    transform: scale(2.0); 
+    opacity: 1; 
     cursor: pointer;
 }
 
+.task-info {
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    margin-top: 90px;
+    font-size: 2.0rem;
+    color: #fff;
+}
+
+.task-item:hover .task-info {
+    opacity: 1; 
+}
+
 .task-icon img {
+    width: 100%;
     border-radius: 10%;
-}
-
-.task1 img {
-    width: 100px;
-    border-radius: 50%;
-}
-
-.task1 {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.task1:hover {
-    transform: scale(1.1);
 }

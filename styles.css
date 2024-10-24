@@ -1,113 +1,182 @@
-
 body {
-    font-family: 'Calvino Grande Trial', sans-serif;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000f5;
- }
- 
- 
- .container {
-    position: relative;
-    height: 100vh; 
-    width: 100vw;  /
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-   
- }
-   
- .overlay {
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 100%;
-    background-image: url('https://s3-alpha-sig.figma.com/img/e9c0/ce48/06728062e3721e12b38b495b488c174d?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=leM3yizbEgKUWc8h1q4jUwBUQZtkYJ8apYjB4TcUH6Z2FFNDJ7axILOiatZO-VkG4nzC4lTTNrmfd45hnxcr8y8NYGmZZBz2vPCJlGJYYI9c~SJkd4eipjZrU~JQKkkDq7MRq9qMCHwUu3bnVS8sGxbx~THBPGCI~dQe97B9fnBrIIXSEUEmZhJKs661t550LSxGRDyBBUfkBurepPUn4tHsQGp~qBA95ltY7sJvZz3t9d0Gy-HbbG9Y2KKcdk8g2RhOXn7ZMSLK0uhc5NnT7XmmAtu6w0idyarOWbNrb66pfEeOunoOO7wuItzMRGFZRU0zuBtIagQID7rL~e9yCA__');
-    opacity: 65%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
- }
- 
- 
- .content {
-    position: relative;
-    z-index: 1;
-    text-align: left;
-    color: white;
-    padding: 2vw; 
- }
-  
- 
- 
- h1 {
-    font-family: 'Calvino Grande Trial', sans-serif;
-    font-weight: 800;
-    font-size: 6rem;
-    margin-bottom: 2vw;
-    margin-left: 0;
-    line-height: 0.95;
- }
- 
- 
- p {
-     font-size: 1.5rem;
-     margin-top: 1vw;
-     margin-bottom: 10px;
- 
- 
- }
- 
- 
- .fade-in-text {
-    font-family: Arial;
-    font-size: 150px;
-    animation: fadeIn 5s;
-  }
- 
- 
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
- 
- 
- span {
+   font-family: 'Calvino Grande Trial', sans-serif;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #000000f5;
+}
+
+.notification {
+   position: fixed;
+   top: 20px;
+   right: 20px;
+   background-color: rgb(77, 148, 128);
+   color: #000000;
+   padding: 1rem;
+   border-radius: 10px;
+   font-size: 1rem;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   opacity: 0;
+   transform: translateY(-30px);
+   animation: slideInFade 1s ease forwards, slideOutFade 1s ease 20s forwards;
+}
+
+@keyframes slideInFade {
+   from {
+       opacity: 0;
+       transform: translateY(-50px);
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+@keyframes slideOutFade {
+   from {
+       opacity: 1;
+       transform: translateY(0);
+   }
+   to {
+       opacity: 0;
+       transform: translateY(-50px);
+   }
+}
+
+.container {
+   position: relative;
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+.heart-background {
+   position: absolute;
+   opacity: 65%;
+   top: 15%;
+   left: 10%;
+   transform: translate(-50%, -50%);
+   max-width: 400px;
+   max-height: 400px;
+   z-index: 0;
+   animation: heartbeat 6s infinite;
+}
+
+@keyframes heartbeat {
+   0% { transform: scale(1); }
+   50% { transform: scale(1.1); }
+   100% { transform: scale(1); }
+}
+
+.content {
+   position: relative;
+   z-index: 1;
+   text-align: center;
+   color: white;
+   padding: 5vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.fade-in-text {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto auto;
+   text-align: center;
+   justify-items: center;
+}
+
+.fade-in-text h1 span {
     display: block;
- }
- 
- 
- button {
-    background-color: rgba(255, 255, 255, 0.0); 
-    color: white; 
-    border: 1px solid white; 
-    padding: 1vw 6vw;
-    font-size: 1rem; 
-    cursor: pointer; 
-    border-radius: 40px; 
-    transition: background-color 0.3s ease;
-    display: inline-block; 
-    margin-top: 2vw; 
- }
- 
- 
- button:hover {
-    background-color: rgba(255, 255, 255, 0.5); 
- }
- 
- 
- 
- @media (max-width: 700px) {
-    h1 {
-        font-size: 3rem; 
-        text-align: center;        
-    }
-    }
- 
+}
+
+.fade-in-text h1 {
+   font-family: 'Calvino Grande Trial', sans-serif;
+   font-weight: 800;
+   font-size: 2.5rem;
+   line-height: 1.1;
+   opacity: 0;
+   animation: fadeIn 5s forwards;
+}
+
+@keyframes fadeIn {
+   from { opacity: 0; }
+   to { opacity: 1; }
+}
+
+.button-container {
+   margin-top: 5vw;
+   text-align: center;
+}
+
+.button {
+   background-color: #004776;
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #000000;
+   font-size: 0.8rem;
+   cursor: pointer;
+   transition: all 0.1s ease;
+}
+
+.button:hover {
+   color: #fff9f9;
+   width: 150px;
+   height: 50px;
+   border-radius: 25px;
+}
+
+.button:hover::after {
+   content: 'start je reis';
+   color: #ffffff;
+   position: absolute;
+   left: 65px;
+   font-size: 1rem;
+}
+
+@media (min-width: 700px) {
+   .notification {
+       top: 60px;
+       right: 50px;
+       padding: 1rem 2rem;
+       font-size: 1.2rem;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   }
+
+   .heart-background {
+      max-width: 800px;
+      max-height: 800px;
+      top: 10%;
+      left: 25%;
+   }
+
+   .fade-in-text h1 {
+      font-size: 6rem;
+      line-height: 0.95;
+      text-align: center;
+      justify-content: center;
+   }
+
+   .button:hover {
+       width: 200px;
+       height: 60px;
+       border-radius: 30px;
+   }
+
+   .button:hover::after {
+       left: 170px;
+       font-size: 1.2rem;
+   }
+}
+

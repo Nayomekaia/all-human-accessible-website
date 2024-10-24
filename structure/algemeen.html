@@ -4,32 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introductie Algemeen</title>
+    <link href="https://fonts.cdnfonts.com/css/calvino-grande-trial" rel="stylesheet">
     <link rel="stylesheet" href="../styles/algemeen.css">
+        
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1>Introductie algemeen</h1>
+            <h1>Introductie <span>algemeen</span></h1>
         </header>
+        <nav aria-label="Navigatie naar secties">
+            <ul class="hidden-navigation">
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#rouwtaken">Rouwtaken</a></li>
+                <li><a href="#tools">Tools</a></li>
+            </ul>
+        </nav>
         <div class="intro-sections">
-            <div class="section">
+            <div class="section" id="privacy">
                 <h2>Privacy</h2>
                 <p>Jouw privacy en comfort zijn onze prioriteit. Alles wat je deelt blijft vertrouwelijk.</p>
             </div>
-            <div class="section">
+            <div class="section" id="rouwtaken">
                 <h2>Rouwtaken</h2>
                 <p>Onze methode is gebaseerd op de erkende rouwtaken van William Worden, Amerikaans rouwexpert, zorgvuldig samengesteld om jou te ondersteunen tijdens je rouwreis.</p>
                 <p>Ontdek met ons de betekenis en steun die het jou kan bieden.</p>
             </div>
-            <div class="section">
+            <div class="section" id="tools">
                 <h2>Tools</h2>
                 <p>We hebben tools samengesteld om je te ondersteunen in je reis door rouw. Straks geven we een rondleiding binnen de omgeving.</p>
                 <p>Laten we nu eerst samen het landschap van rouw verkennen.</p>
             </div>
         </div>
-        <div class="arrow-button">
-            <a href="../structure/rouwtaken.html">&#10132;</a>
+        <div class="arrow-button" role="navigation">
+            <a href="../structure/rouwtaken.html" aria-label="Ga naar Rouwtaken">&#10132;</a>
         </div>
     </div>
 </body>
+</html>
+
 </html>

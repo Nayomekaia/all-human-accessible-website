@@ -1,65 +1,70 @@
-
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Calvino Grande Trial', sans-serif;
   background-color: #0b0b0b;
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
   text-align: center;
 }
 
 header {
-  border-bottom: 1px solid #444;
-  padding-bottom: 20px;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 600;
+  margin-right: 10px;
 }
 
 main {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start; 
   width: 100%;
 }
 
 .content {
-  width: 60%; 
-  padding-right: 20px; 
-  text-align: left; 
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 30px;
 }
 
 button {
-  background-color: transparent;
+  background-color: #ffffff00;
   border: 1px solid #ffffff;
-  padding: 10px 20px;
+  padding: 10px 30px;
   font-size: 1rem;
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.3s;
+  border-radius: 25px;
 }
 
 button:hover {
@@ -68,45 +73,41 @@ button:hover {
 }
 
 .image-fader {
-  width: 200px; 
-  height: auto;
-  position: absolute; 
-  right: 200px; 
-  top: 50%; 
-  transform: translateY(-50%); 
+  width: 100%;
+  height: 0;
+  position: absolute;
+  right: 25%;
+  top: 40%;
+  opacity: 20%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
-
 .image-fader img {
-  width: 100%;
+  width: 50%;
   height: auto;
   position: absolute;
   top: 0;
-  left: 0;
-  opacity: 0; 
+  opacity: 0;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-duration: 10s;
 }
-
 
 .image-fader img:nth-child(1) {
   animation-name: imagefade1;
   animation-delay: 1ms;
 }
 
-
 .image-fader img:nth-child(2) {
   animation-name: imagefade2;
   animation-delay: 1ms;
 }
 
-
 .image-fader img:nth-child(3) {
   animation-name: imagefade3;
   animation-delay: 1ms;
 }
-
 
 .image-fader img:nth-child(4) {
   animation-name: imagefade4;
@@ -133,4 +134,47 @@ button:hover {
 @keyframes imagefade4 {
   0%, 75% { opacity: 0; }
   80%, 100% { opacity: 1; }
+}
+
+@media (min-width: 600px) {
+  header {
+      margin-bottom: 40px;
+  }
+
+  h1 {
+      font-size: 3rem;
+      margin-right: 20px;
+  }
+
+  main {
+      flex-direction: row;
+      justify-content: flex-start;
+  }
+
+  .content {
+      width: 60%;
+      padding-right: 20px;
+      text-align: left;
+  }
+
+  h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+  }
+
+  p {
+      font-size: 1.4rem;
+      margin-bottom: 70px;
+  }
+
+  button {
+      padding: 11px 45px;
+      font-size: 1.2rem;
+  }
+
+  .image-fader {
+    opacity: 100%;
+    width: 525px;
+    right: 5px;
+  }
 }
