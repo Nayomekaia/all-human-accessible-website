@@ -124,7 +124,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   color: #000000;
+   color: #00000000;
    font-size: 0.8rem;
    cursor: pointer;
    transition: all 0.1s ease;
@@ -138,7 +138,6 @@ body {
 }
 
 .button:hover::after {
-   content: 'start je reis';
    color: #ffffff;
    position: absolute;
    left: 65px;
