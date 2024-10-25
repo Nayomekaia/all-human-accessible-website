@@ -2,61 +2,64 @@ body {
     font-family: 'Calvino Grande Trial', sans-serif;
     background-color: #0d0d0d;
     color: #fff;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
-    text-align: center;
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .header h1 {
-    font-size: 3.5em;
+    font-size: 2.5em;
     font-weight: bold;
     text-align: left;
     border-bottom: 1px solid #fff;
     padding-bottom: 0.5em;
+    margin-bottom: 20px;
 }
+
 header h1 span {
     display: block;
 }
 
 .intro-sections {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+    display: block;
 }
 
 .section {
-    width: 30%;
+    width: 100%;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 3.5em;
+    font-size: 2em;
     margin-bottom: 0.5em;
     font-weight: bold;
+    text-align: left;
 }
 
 p {
-    font-size: 18px;
+    font-size: 1em;
     margin-bottom: 0.5em;
+    text-align: left;
 }
 
 .arrow-button {
     margin-top: 2em;
+    text-align: left;
 }
 
 .arrow-button a {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -64,4 +67,35 @@ p {
 
 .arrow-button a:hover {
     color: #999;
+}
+
+/*desktop*/
+@media (min-width: 768px) {
+    .intro-sections {
+        display: flex; 
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .section {
+        width: 30%;
+        margin-bottom: 0;
+    }
+
+    .header h1 {
+        font-size: 3.5em;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+
+    .arrow-button {
+        margin-top: 1em;
+    }
 }

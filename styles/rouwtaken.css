@@ -3,11 +3,10 @@ body {
     color: #fff;
     font-family: 'Calvino Grande Trial', sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
     margin: 0;
-    overflow: hidden; 
+    overflow-x: hidden;
 }
 
 .header {
@@ -38,6 +37,7 @@ header h1 span {
     width: 80%;
     margin: 0 auto;
     padding-top: 200px; 
+    padding-bottom: 20px; 
 }
 
 h2 {
@@ -58,16 +58,16 @@ p span {
 }
 
 .task-icons {
-    display: flex;
-    justify-content: center; 
-    gap: 125px; 
+    display: block; 
     width: 100%; 
+    text-align: center;
 }
 
 .task-item {
     text-align: center;
     position: relative;
     transition: transform 0.5s ease;
+    margin-bottom: 20px; 
 }
 
 .task-icon {
@@ -98,3 +98,22 @@ p span {
     width: 100%;
     border-radius: 10%;
 }
+
+@media (min-width: 768px) {
+    .task-icons {
+        display: flex; 
+        justify-content: center; 
+        gap: 125px; 
+    }
+
+    .task-item {
+        margin-bottom: 0; 
+    }
+
+    .header {
+        position: relative; 
+    }
+}
+
+
+
